@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var total
+        var cliente
+        var porcas
+        var parafusos
+        var arruelas
+        var pporcas
+        var pparafusos
+        var parruelas
+        
+        pporcas = 0.25
+        pparafusos = 0.75
+        parruelas = 0.50
+
+        cliente = window.prompt('informe o nome de cliente')
+        porcas = window.prompt('informe o numero de porcas')
+        parafusos = window.prompt('informe o numero de parafusos')
+        arruelas = window.prompt('informe o numero de parafusos')
+        total = (Number(porcas)*Number(pporcas)) + (Number(parafusos)*Number(pparafusos))+(Number(arruelas)*Number(parruelas))
+        document.write ('o total de compra de'+ cliente, 'é de' +total)
+    </script>
+</body>
+</html>
