@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+    <title>Concessionaria</title>
+</head>
+<body>
+    <header>
+        <img src="assets/img/logo_header_hub_fiat.svg" alt="">
+    </header>
+    <section id="container">
+        <div class="contdiv">
+            <div class="divv">
+                <p>Informer o veiculo desejado:</p>
+                <input type="text" name="veiculo" id="veiculo">
+            </div>
+            <div class="divv">
+                <p>Informe o valor do veiculo:</p>
+                <input type="number" name="valor" id="valor">
+            </div>
+            <div class="divv">
+                <p>Informe o percentual de entrada:</p>
+                <input type="number" name="entrada" id="entrada">
+            </div>
+            <div class="divv">
+                <p>Informe o numero de parcelas:</p>
+                <input type="number" name="parcelas" id="parcelas">
+            </div>
+            <div class="divv">
+                <input type="button" value="Calcular" id="calcular" onclick="calcular()">
+            </div>
+        </div>
+        <div class="contdiv">
+            <div class="divv">   
+                <p>Valor da entrada:</p>
+                <input type="number" name="ventrada" id="ventrada">
+            </div>
+            <div class="divv">    
+                <p>Quantidade de parcelas:</p>
+                <input type="number" name="quantparcelas" id="quantparcelas">
+            </div>
+            <div class="divv">    
+                <p>Valor de cada parcela:</p>
+                <input type="number" name="vparcelas" id="vparcelas">
+            </div>   
+            <div class="divv">
+                <p>Valor restante:</p>
+                <input type="number" name="vrestante" id="vrestante">
+            </div> 
+        </div>
+    </section>
+    <script src="index.js"></script>
+</body>
+</html>

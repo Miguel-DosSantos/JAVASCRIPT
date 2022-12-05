@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <header>
+        <h1>VETORES </h1>
+    </header>
+
+    <div>
+        Preencha o vetor <input type="number" name="num" id="num">
+        <input type="button" value="Adicionar" id="adicionar" onclick="adicionar()">
+    </div>
+    <div id="lista">
+        Aguardando... <br>
+    </div>
+
+    <div>
+        <input type="button" value="Finalizar" id="Finalizar" onclick="finalizar()">
+        <div id="res"></div>
+
+    </div>
+
+    <script>
+        let num = document.getElementById('num')
+        let lista = document.getElementById('lista')
+        let res = document.getElementById('res')
+        let elementos=[]
+
+        function adicionar(){
+            if(num.value>=1 && num.value<=5000){
+                elementos.push(num.value)
+
+                lista.innerHTML+= (`<br> Valor ${num.value} adicionado <br>`)
+            }
+            else{
+                window.alert('valor inválido')
+            }
+        }
+
+        function finalizar(){
+            var soma = 0
+            var media = 0
+            var total = elementos.length
+            for(var cont in elementos){
+                soma += Number (elementos[cont])
+                media = soma/total
+
+            }
+
+            var maior=Math.max.apply(null,elementos)
+            var menor=Math.min.apply(null,elementos)
+
+            res.innerHTML = `Foram inseridos ${total} elementos <br> Soma ${soma} <br> Media ${media} <br> Maior valor ${maior} <br> Menor valor ${menor} `
+
+        }
+
+
+
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #resp{
+            margin-top: 50px;
+            border: 1px solid;
+            text-align: center;
+            padding-top: 80px;
+            height: 100px;
+            width: 400px;
+        }
+        p{
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+<div>
+    <p>
+    Informe o 1° time: <input type="text" name="time1" id="time1">
+    Informe o numero de gols: <input type="number" name="gol1" id="gol1">
+    </p>
+
+    <p>
+        Informe o 2° time: <input type="text" name="time2" id="time2" >
+        Informe o numero de gols: <input type="number" name="gol2" id="gol2">
+    </p>
+    <input type="button" value="Calcular" id="calcular" onclick="calcular()">
+
+    <div id="resp">
+        Aguardando...
+    </div>
+</div>
+
+<script>
+    function calcular()
+    {
+        var time1 = document.getElementById (`time1`)
+        var time2 = document.getElementById (`time2`)
+        var gol1 = document.getElementById (`gol1`)
+        var gol2 = document.getElementById (`gol2`)
+        gol1 = Number(gol1.value)
+        gol2 = Number(gol2.value)
+        time1 = (time1.value)
+        time2 = (time2.value)
+        if(gol1>gol2)
+        {resp.innerHTML = (`${time1} GANHOU`)}
+        else if(gol1==gol2)
+        {resp.innerHTML=(`EMPATE`)}
+        else
+        {resp.innerHTML = (`${time2} GANHOU`)}
+    }
+</script>
+</body>
+</html>

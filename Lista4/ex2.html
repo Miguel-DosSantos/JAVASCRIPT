@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<div>
+    <p>Informe o numero de lados: <input type="number" name="lados" id="lados"></p>
+    <p>Informe a medida do lado: <input type="number" name="mlados" id="mlados"></p>
+    <p><input type="button" value="Calcular" id="calcular" onclick="calcular()"></p>
+</div>
+<div id="resp">
+    Aguardando...
+</div>
+<script>
+    function calcular()
+    {
+        var lados = document.getElementById (`lados`)
+        var mlados = document.getElementById (`mlados`)
+        lados = Number(lados.value)
+        mlados = Number(mlados.value)
+        var perimetro = (lados * 3)
+        var area = (mlados*mlados)
+        if(lados==3)
+        {
+            resp.innerHTML = (`Isto é um TRIANGULO com perimetro de ${perimetro}`)
+        }
+        if(lados == 4)
+        {
+            resp.innerHTML = (`Isto é um QUADRADO com area de ${area}`)
+        }
+        else(lados==5)
+        {resp.innerHTML = (`Isto é um PENTAGONO`)}
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <p>Valor em REAL: <input type="number" name="Real" id="real" oninput="convertedolar()"></p>
+
+        <p>Valor em DOLAR: <input type="number" name="dolar" id="dolar" oninput="convertereal()"></p>
+    </div>
+    <script>
+        function convertedolar()
+        {
+            var real = document.getElementById (`real`)
+            var dolar = document.getElementById(`dolar`)
+            real = Number(real.value)
+            var converter = (real/5.37)
+            dolar.value = Number(converter.toFixed(2))
+            
+        }
+        function convertereal()
+        {
+            var real = document.getElementById (`real`)
+            var dolar = document.getElementById(`dolar`)
+            dolar = Number(dolar.value)
+            var converter = (dolar*5.37)
+            real.value = Number(converter.toFixed(2))
+            
+        }
+    </script>
+</body>
+</html>
